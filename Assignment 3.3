@@ -1,0 +1,26 @@
+Q-List the components of Hadoop 2.x and explain them in detail.
+Sol-
+Hadoop 2.x has some common Hadoop API which can easily be integrated with any third party applications to work with Hadoop
+It has some new Java APIs and features in HDFS and MapReduce which are known as HDFS2 and MR2 respectively
+New architecture has added the architectural features like HDFS High Availability and HDFS Federation
+Hadoop 2.x not using Job Tracker and Task Tracker daemons for resource management now on-wards, it is using
+YARN (Yet Another Resource Negotiator) for Resource Management
+Hadoop 2.x supports two Name Nodes at a time one node is active and another is standby node
+Active Name Node handles the client operations in the cluster
+StandBy Name Node manages metadata same as Secondary Name Node in Hadoop 1.x
+When Active Name Node is down, Standby Name Node takes over and will handle the client operations then after.
+
+# MAP REDUCE(Processing part)
+ - Master Daemon - Resource Manager
+   High End Machines
+   Usually 1 in number
+ - Slave Daemon  - Node Manager
+   Commodity Machines
+   Many in numbers
+# HDFS(Storage part)
+ - Master Daemon - Namenode
+   High End Machines
+   Usually 1 in number
+ - Slave Daemon  - Datanode
+   Commodity Machines
+   Many in numbers
